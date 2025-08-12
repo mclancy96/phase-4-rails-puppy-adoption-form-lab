@@ -1,6 +1,14 @@
 class PuppiesController < ApplicationController
-  # TODO: Add your controller actions here
-  # You'll need an 'index' action to display the homepage
-  # You'll need a 'new' action to display the form
-  # You'll need a 'create' action to process the form submission and display the puppy
+  def index
+    # Display the homepage
+  end
+
+  def new
+    # Display the form
+  end
+
+  def create
+    # Process form submission and display the puppy
+    @puppy = Puppy.new(params[:name], params[:breed], params[:age])
+  end
 end
